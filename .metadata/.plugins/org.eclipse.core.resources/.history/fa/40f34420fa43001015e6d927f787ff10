@@ -1,0 +1,62 @@
+package Algorithms;
+
+public class EightQueens {
+	
+	//Main
+	public static void main (String[] args) {
+		
+	    int[][] board = new int[8][8];  // start with an empty board
+
+
+	    // now solve will pick next positions and update the same board
+	    board = solve(board);
+	}
+	
+	
+	//must be able to
+	//add queen
+	public static int[][] Board(int row, int column, int[][] grid) {
+		
+		grid[row][column] = 1;
+		
+		
+		
+		//prints the board
+		for (int i = 0; i < 8; i++) {
+			for (int j = 0; j < 8; j++) {
+				System.out.print(grid[i][j]);
+			}
+			//next line after each row
+			System.out.println();
+		}
+		//return new board
+		return grid;
+	}
+	
+	//the one updating the board
+	public static int[][] solve(int[][] grid) {
+		//picks a column in the first row
+		int fqueen = (int)(Math.random()* 8);
+		grid = Board(fqueen, 0, grid);
+		
+		
+		return grid;
+		
+	}
+	//Check Rows
+	public static void Row(){
+		
+	}
+
+	//Check Diagonals
+	//sums must be equal to row
+	//3,0 -> 2,1 -> 1,2 -> 0,3
+	public static void Diagonals() {
+		
+	}
+	
+	
+
+}
+
+
